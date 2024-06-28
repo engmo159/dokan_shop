@@ -2,8 +2,9 @@ import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './globals.css'
-import BootstrapClient from './components/Nav/BootstrapClient'
+import BootstrapClient from './components/BootstrapClient'
 import NavBar from './components/Nav/NavBar'
+import { useEffect } from 'react'
 
 const poppins = Poppins({
   subsets: ['latin'],

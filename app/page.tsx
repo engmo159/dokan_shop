@@ -1,6 +1,17 @@
 /* eslint-disable react/no-unescaped-entities */
-import styles from './page.module.css'
+import { useEffect } from 'react'
+import Carousel from './components/carousel/Carousel'
+import HotDeals from './sections/HotDeals'
+import Products from './sections/Products'
+import VideoSection from './sections/VideoSection'
 
 export default function Home() {
-  return <></>
+  return (
+    <>
+      <Carousel />
+      <Products />
+      <VideoSection />
+      <HotDeals />
+    </>
+  )
 }

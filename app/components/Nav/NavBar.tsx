@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 'use client'
 
-import NavList from '../NavList'
-import DropDownList from './DropDownList'
+import NavList from './nav_components/NavList'
+import DropDownList from './nav_components/DropDownList'
 import Image from 'next/image'
 import styled from 'styled-components'
 
@@ -20,7 +20,7 @@ const NavBar: React.FC = () => {
       data-bs-theme='dark'
     >
       <div className='container custom_container '>
-        <StyledLogo src='/images/main-logo.svg' alt='logo className' />
+        <StyledLogo src='/images/main-logo.svg' alt='logo' />
         <a className='navbar-brand w-1 fs-2 fw-bolder' href='#'>
           Dokan Shop
         </a>
@@ -36,8 +36,8 @@ const NavBar: React.FC = () => {
           <span className='navbar-toggler-icon'></span>
         </button>
         <div className='collapse navbar-collapse' id='navbarSupportedContent'>
-          <ul className='navbar-nav ms-auto mb-2 mb-lg-0'>
-            <NavList>Home</NavList>
+          <ul className='navbar-nav ms-auto mb-2 mb-lg-0 '>
+            <NavList isHome>Home</NavList>
             <NavList>Latest Products</NavList>
             <NavList>Top Deals</NavList>
             <NavList>Log In</NavList>

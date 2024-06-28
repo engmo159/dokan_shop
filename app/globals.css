@@ -1,3 +1,10 @@
+:root {
+  --font-color: #fff;
+  --sec-color: #cd5c5c;
+  --p-color: #777;
+  --icon-color: #a9a9a9;
+}
+
 * {
   font-family: 'Poppins', sans-serif;
   padding: 0;
@@ -6,6 +13,10 @@
 }
 .custom_container {
   @media screen and (min-width: 1400px) {
-    width: 77%;
+    width: 76%;
   }
+}
+
+.section {
+  padding: 4.5rem 0 4.5rem 0;
 }
