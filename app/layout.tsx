@@ -5,6 +5,7 @@ import './globals.css'
 import BootstrapClient from './components/BootstrapClient'
 import NavBar from './components/Nav/NavBar'
 import { useEffect } from 'react'
+import Footer from './sections/Footer'
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -27,6 +28,7 @@ export default function RootLayout({
       <body className={poppins.className}>
         <NavBar />
         {children}
+        <Footer />
         <BootstrapClient />
       </body>
     </html>

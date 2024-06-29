@@ -3,6 +3,7 @@
 
 import styled from 'styled-components'
 import Paragraph from '../components/Paragraph'
+import ContainerSection from '../components/Container'
 
 const StyledH = styled.h1`
   font-size: 3.5rem;
@@ -15,7 +16,7 @@ const StyledVideo = styled.video`
 `
 const VideoSection = () => {
   return (
-    <section className='section text-center container custom_container'>
+    <ContainerSection>
       <StyledH className='fw-bold '>Dokan Shop Store</StyledH>
       <Paragraph>This Is Our Store In Real, Don't Miss To Visit Us</Paragraph>
       <StyledVideo
@@ -28,7 +29,7 @@ const VideoSection = () => {
       >
         <source src='video/videoplayback.mp4' type='video/mp4' />
       </StyledVideo>
-    </section>
+    </ContainerSection>
   )
 }
 

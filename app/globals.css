@@ -3,6 +3,7 @@
   --sec-color: #cd5c5c;
   --p-color: #777;
   --icon-color: #a9a9a9;
+  --nav-color: #343a40;
 }
 
 * {
@@ -19,4 +20,34 @@
 
 .section {
   padding: 4.5rem 0 4.5rem 0;
+}
+
+@keyframes scaleAnimation {
+  0% {
+    transform: scale(0, 0);
+    display: none;
+  }
+  1% {
+    transform: scale(0, 0);
+    display: block;
+  }
+
+  100% {
+    transform: scale(1, 1);
+  }
+}
+@keyframes scaleAnimationReverse {
+  0% {
+    transform: scale(1, 1);
+    display: block;
+  }
+
+  99% {
+    transform: scale(0, 0);
+    display: block;
+  }
+  100% {
+    transform: scale(0, 0);
+    display: none;
+  }
 }

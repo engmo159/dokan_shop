@@ -10,7 +10,7 @@ const StyledLogo = styled.img`
   height: 45px;
 `
 const StyledNav = styled.nav`
-  background-color: #343a40 !important;
+  background-color: var(--nav-color) !important;
 `
 
 const NavBar: React.FC = () => {

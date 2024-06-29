@@ -2,6 +2,8 @@
 import styled from 'styled-components'
 import Card from '../components/Card'
 import Paragraph from '../components/Paragraph'
+import Heading from '../components/Heading'
+import ContainerSection from '../components/Container'
 
 const cartItems = [
   {
@@ -32,8 +34,8 @@ const cartItems = [
 
 const Products = () => {
   return (
-    <section className='container custom_container text-center section'>
-      <h2 className='fw-semibold fs-1  mb-4'>Latest Products</h2>
+    <ContainerSection>
+      <Heading>Latest Products</Heading>
       <Paragraph> Here , You Can Find Our Newest Products</Paragraph>
 
       <div className='row '>
@@ -41,7 +43,7 @@ const Products = () => {
           <Card key={index} src={item.src} h5={item.h5} p={item.p} />
         ))}
       </div>
-    </section>
+    </ContainerSection>
   )
 }
 

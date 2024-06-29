@@ -4,6 +4,7 @@ import Carousel from './components/carousel/Carousel'
 import HotDeals from './sections/HotDeals'
 import Products from './sections/Products'
 import VideoSection from './sections/VideoSection'
+import Feedback from './sections/Feedback'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Products />
       <VideoSection />
       <HotDeals />
+      <Feedback />
     </>
   )
 }

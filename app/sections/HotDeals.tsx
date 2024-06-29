@@ -1,3 +1,5 @@
+import ContainerSection from '../components/Container'
+import Heading from '../components/Heading'
 import ImageDeal from '../components/ImageDeal'
 import Paragraph from '../components/Paragraph'
 
@@ -18,8 +20,8 @@ const images = [
 
 const HotDeals = () => {
   return (
-    <section className='section container custom_container text-center '>
-      <h2 className='fw-semibold fs-1  mb-4'>Hot Deals</h2>
+    <ContainerSection>
+      <Heading>Hot Deals</Heading>
       <Paragraph>
         Searching For Special Things! You Can Find Our Latest Deals Here
       </Paragraph>
@@ -28,7 +30,7 @@ const HotDeals = () => {
           <ImageDeal key={index} src={image.src} />
         ))}
       </div>
-    </section>
+    </ContainerSection>
   )
 }
 

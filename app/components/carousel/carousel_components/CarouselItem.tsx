@@ -28,7 +28,7 @@ const CarouselItem: FC<CarouselItemProps> = ({
     <ItemDiv className={`carousel-item  ${isActive ? 'active' : ''}`}>
       <Image
         src={src}
-        className='d-block w-100 img-fluid'
+        className='d-block w-100 img-fluid object-fit-cover'
         alt=''
         width={width}
         height={height}
