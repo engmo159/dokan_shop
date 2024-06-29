@@ -8,12 +8,12 @@ import Feedback from './sections/Feedback'
 
 export default function Home() {
   return (
-    <>
+    <div className='scrollspy-example'>
       <Carousel />
       <Products />
       <VideoSection />
       <HotDeals />
       <Feedback />
-    </>
+    </div>
   )
 }

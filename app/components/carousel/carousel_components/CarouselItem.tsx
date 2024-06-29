@@ -33,9 +33,9 @@ const CarouselItem: FC<CarouselItemProps> = ({
         width={width}
         height={height}
       />
-      <div className='carousel-caption d-none d-md-block'>
-        <h5>{heading}</h5>
-        <p>{paragraph}</p>
+      <div className='carousel-caption d-none d-md-block z-3'>
+        <h5 className='fs-5 fw-bold'>{heading}</h5>
+        <p className='fs-5 fw-light'>{paragraph}</p>
       </div>
     </ItemDiv>
   )

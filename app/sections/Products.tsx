@@ -34,16 +34,18 @@ const cartItems = [
 
 const Products = () => {
   return (
-    <ContainerSection>
-      <Heading>Latest Products</Heading>
-      <Paragraph> Here , You Can Find Our Newest Products</Paragraph>
+    <div id='products'>
+      <ContainerSection>
+        <Heading>Latest Products</Heading>
+        <Paragraph> Here , You Can Find Our Newest Products</Paragraph>
 
-      <div className='row '>
-        {cartItems.map((item, index) => (
-          <Card key={index} src={item.src} h5={item.h5} p={item.p} />
-        ))}
-      </div>
-    </ContainerSection>
+        <div className='row '>
+          {cartItems.map((item, index) => (
+            <Card key={index} src={item.src} h5={item.h5} p={item.p} />
+          ))}
+        </div>
+      </ContainerSection>
+    </div>
   )
 }
 

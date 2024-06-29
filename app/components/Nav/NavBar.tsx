@@ -18,6 +18,7 @@ const NavBar: React.FC = () => {
     <StyledNav
       className='navbar navbar-expand-lg  border-body sticky-top '
       data-bs-theme='dark'
+      id='navbar'
     >
       <div className='container custom_container '>
         <StyledLogo src='/images/main-logo.svg' alt='logo' />
@@ -37,10 +38,12 @@ const NavBar: React.FC = () => {
         </button>
         <div className='collapse navbar-collapse' id='navbarSupportedContent'>
           <ul className='navbar-nav ms-auto mb-2 mb-lg-0 '>
-            <NavList isHome>Home</NavList>
-            <NavList>Latest Products</NavList>
-            <NavList>Top Deals</NavList>
-            <NavList>Log In</NavList>
+            <NavList isHome href='#'>
+              Home
+            </NavList>
+            <NavList href='#products'>Latest Products</NavList>
+            <NavList href='#deals'>Top Deals</NavList>
+            <NavList href='#'>Log In</NavList>
             <li className='nav-item dropdown'>
               <a
                 className='nav-link dropdown-toggle'

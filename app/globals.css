@@ -12,6 +12,9 @@
   margin: 0;
   box-sizing: border-box;
 }
+a {
+  text-decoration: none;
+}
 .custom_container {
   @media screen and (min-width: 1400px) {
     width: 76%;

@@ -25,7 +25,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={poppins.className}>
+      <body
+        className={poppins.className}
+        data-bs-spy='scroll'
+        data-bs-target='#navbar'
+        data-bs-root-margin='0px 0px -40%'
+        data-bs-smooth-scroll='true'
+        tabIndex='0'
+      >
         <NavBar />
         {children}
         <Footer />

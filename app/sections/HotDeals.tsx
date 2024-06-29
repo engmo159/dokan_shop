@@ -20,17 +20,19 @@ const images = [
 
 const HotDeals = () => {
   return (
-    <ContainerSection>
-      <Heading>Hot Deals</Heading>
-      <Paragraph>
-        Searching For Special Things! You Can Find Our Latest Deals Here
-      </Paragraph>
-      <div className='row d-flex align-items-center justify-content-evenly'>
-        {images.map((image, index) => (
-          <ImageDeal key={index} src={image.src} />
-        ))}
-      </div>
-    </ContainerSection>
+    <div id='deals'>
+      <ContainerSection>
+        <Heading>Hot Deals</Heading>
+        <Paragraph>
+          Searching For Special Things! You Can Find Our Latest Deals Here
+        </Paragraph>
+        <div className='row d-flex align-items-center justify-content-evenly'>
+          {images.map((image, index) => (
+            <ImageDeal key={index} src={image.src} />
+          ))}
+        </div>
+      </ContainerSection>
+    </div>
   )
 }
 
