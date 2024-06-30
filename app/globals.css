@@ -6,6 +6,10 @@
   --nav-color: #343a40;
 }
 
+/* * {
+  outline: solid 1px red;
+} */
+
 * {
   font-family: 'Poppins', sans-serif;
   padding: 0;

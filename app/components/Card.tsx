@@ -13,6 +13,13 @@ interface CardProps {
   p: string
 }
 
+const StyledDiv = styled.div`
+  @media screen and (max-width: 767px) {
+    width: 60%;
+    margin: 1rem;
+  }
+`
+
 const StyledP = styled.p`
   color: var(--p-color);
 `
@@ -21,6 +28,7 @@ const StyledIconDiv = styled.div`
 `
 const StyledIcon = styled.div`
   transition: all 0.3s ease-out;
+
   &:hover {
     color: var(--sec-color);
   }
@@ -34,16 +42,18 @@ const ButtonLink = styled(Link)`
   }
 `
 const StyledImage = styled(Image)`
-  height: 17rem;
+  height: auto;
+  /* width: 100% !important; */
 `
 const Card: FC<CardProps> = ({ src, h5, p }) => {
   return (
-    <div className='card col-lg-3  border-0' style={{ width: '17rem' }}>
+    <StyledDiv className='card   col-lg-3 col-md-6 col-sm-12  border-0 my-4'>
       <StyledImage
         src={src}
-        className='card-img-top image-fluid'
+        className='card-img-top image-fluid '
         height={390}
         width={370}
+        layout='responsive'
         alt='...'
       />
 
@@ -64,7 +74,7 @@ const Card: FC<CardProps> = ({ src, h5, p }) => {
           See More
         </ButtonLink>
       </div>
-    </div>
+    </StyledDiv>
   )
 }
 

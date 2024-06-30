@@ -9,6 +9,10 @@ const ButtonDiv = styled.div`
 const StyledButton = styled.button`
   background-color: var(--sec-color);
   color: white;
+  @media screen and (max-width: 767px) {
+    width: 100%;
+    margin-bottom: 3rem;
+  }
 `
 const FormSection = () => {
   return (

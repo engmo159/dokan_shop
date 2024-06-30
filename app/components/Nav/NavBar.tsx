@@ -22,7 +22,7 @@ const NavBar: React.FC = () => {
     >
       <div className='container custom_container '>
         <StyledLogo src='/images/main-logo.svg' alt='logo' />
-        <a className='navbar-brand w-1 fs-2 fw-bolder' href='#'>
+        <a className='navbar-brand w-1 fs-2 fw-bolder' href='/'>
           Dokan Shop
         </a>
         <button
@@ -38,12 +38,12 @@ const NavBar: React.FC = () => {
         </button>
         <div className='collapse navbar-collapse' id='navbarSupportedContent'>
           <ul className='navbar-nav ms-auto mb-2 mb-lg-0 '>
-            <NavList isHome href='#'>
+            <NavList isHome href='/'>
               Home
             </NavList>
             <NavList href='#products'>Latest Products</NavList>
             <NavList href='#deals'>Top Deals</NavList>
-            <NavList href='#'>Log In</NavList>
+            <NavList href='/sign-in'>Log In</NavList>
             <li className='nav-item dropdown'>
               <a
                 className='nav-link dropdown-toggle'

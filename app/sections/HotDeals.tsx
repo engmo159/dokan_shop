@@ -1,4 +1,4 @@
-import ContainerSection from '../components/Container'
+import ContainerSection from '../components/ContainerSection'
 import Heading from '../components/Heading'
 import ImageDeal from '../components/ImageDeal'
 import Paragraph from '../components/Paragraph'
@@ -26,7 +26,7 @@ const HotDeals = () => {
         <Paragraph>
           Searching For Special Things! You Can Find Our Latest Deals Here
         </Paragraph>
-        <div className='row d-flex align-items-center justify-content-evenly'>
+        <div className='row d-flex align-items-center justify-content-evenly mx-auto'>
           {images.map((image, index) => (
             <ImageDeal key={index} src={image.src} />
           ))}

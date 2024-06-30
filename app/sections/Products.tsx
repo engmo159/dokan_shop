@@ -1,9 +1,8 @@
 'use client'
-import styled from 'styled-components'
 import Card from '../components/Card'
 import Paragraph from '../components/Paragraph'
 import Heading from '../components/Heading'
-import ContainerSection from '../components/Container'
+import ContainerSection from '../components/ContainerSection'
 
 const cartItems = [
   {
@@ -39,7 +38,7 @@ const Products = () => {
         <Heading>Latest Products</Heading>
         <Paragraph> Here , You Can Find Our Newest Products</Paragraph>
 
-        <div className='row '>
+        <div className='row justify-content-center align-items-center mx-auto w-100'>
           {cartItems.map((item, index) => (
             <Card key={index} src={item.src} h5={item.h5} p={item.p} />
           ))}

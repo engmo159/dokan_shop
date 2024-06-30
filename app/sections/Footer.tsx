@@ -63,7 +63,7 @@ const Footer = () => {
   `
   const Icon = styled(FaUserSecret)`
     font-size: 7rem;
-    width: 100%;
+    /* width: 100%; */
   `
   const Hr = styled.div`
     height: 1px;
@@ -72,6 +72,7 @@ const Footer = () => {
   const StyledP = styled.p``
   const linkList = [
     {
+      header: 'Shopping & Categories',
       cols: [
         { title: "Men's shopping", href: '' },
         { title: "Women's shopping", href: '' },
@@ -80,6 +81,7 @@ const Footer = () => {
       ],
     },
     {
+      header: 'Useful Links',
       cols: [
         { title: 'Home Page', href: '' },
         { title: 'About Us', href: '' },
@@ -87,6 +89,7 @@ const Footer = () => {
       ],
     },
     {
+      header: 'Help & Information',
       cols: [
         { title: 'Help', href: '' },
         { title: 'FAQ/S', href: '' },
@@ -97,35 +100,30 @@ const Footer = () => {
   return (
     <StyledFooter>
       <div className='container custom_container text-center py-4'>
-        <div className='row mb-4'>
-          <div className='col-3'></div>
-          <div className='col-3'>
-            <StyledH3 className='fs-5 fw-semibold'>
-              Shopping & Categories
-            </StyledH3>
-          </div>
-          <div className='col-3'>
-            <StyledH3 className='fs-5 fw-semibold'>Useful Links</StyledH3>
-          </div>
-          <div className='col-3'>
-            <StyledH3 className='fs-5 fw-semibold'>Help & Information</StyledH3>
-          </div>
-        </div>
-        <div className='row'>
-          <div className='col-3 d-flex justify-content-start align-items-start'>
-            <Icon />
-            <StyledLink href={'/'}>
-              <h1 className='text-start fs-1'>DOKAN SHOP</h1>
-            </StyledLink>
+        <div className='row  mb-4 row-gap-4'>
+          <div className='col-sm-12 col-md-6 col-lg-3'>
+            <div className=' d-flex justify-content-center align-items-center  h-100'>
+              <Icon />
+              <StyledLink href={'/'}>
+                <h1 className='text-start fs-1'>DOKAN SHOP</h1>
+              </StyledLink>
+            </div>
           </div>
 
           {linkList.map((link, index) => (
-            <div key={index} className='col-3 d-flex flex-column'>
+            <div
+              key={index}
+              className='col-sm-12 col-md-6 col-lg-3 d-flex flex-column'
+            >
+              <StyledH3 className='fs-5 fw-semibold mb-4'>
+                {link.header}
+              </StyledH3>
+
               {link.cols.map((col, colIndex) => (
                 <StyledLink
                   key={colIndex}
                   href={col.href}
-                  className='fs-6 mb-4'
+                  className='fs-6 my-2'
                 >
                   {col.title}
                 </StyledLink>
@@ -133,11 +131,12 @@ const Footer = () => {
             </div>
           ))}
         </div>
+
         <Hr></Hr>
         <div>
           <div>
             <p className='fs-5 fw-light mt-4'>
-              Copyright © 2022 DokanShop Co., Ltd. All Rights Reserved.
+              Copyright © 2024 DokanShop Co., Ltd. All Rights Reserved.
             </p>
           </div>
           <div>
