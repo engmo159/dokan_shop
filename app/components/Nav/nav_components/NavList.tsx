@@ -11,7 +11,7 @@ interface NavListProps {
 
 const StyledLink = styled(Link)<{ $isHome?: boolean }>`
   transition: color 0.3s ease-in-out;
-
+  color: white;
   ${props =>
     props.$isHome &&
     css`
