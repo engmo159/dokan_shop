@@ -2,12 +2,18 @@
 import React, { useState } from 'react'
 import styled from 'styled-components'
 import FlatButton from '../components/buttons/FlatButton'
+import Link from 'next/link'
 
 const StyledContainer = styled.div`
   max-width: 37rem;
 `
 const StyledDiv = styled.div`
   background-color: #f3f3f3;
+  border-top: 3px solid white;
+  border-right: 3px solid var(--p-color);
+  border-bottom: 3px solid var(--p-color);
+  border-left: 3px solid white;
+  border-radius: 2rem;
 `
 
 const ValidationMessage = styled.div`
@@ -15,7 +21,12 @@ const ValidationMessage = styled.div`
   font-size: 0.875rem;
   margin-bottom: 0.5rem;
 `
-
+const StyledLink = styled(Link)`
+  &:hover {
+    text-decoration: underline;
+    font-weight: bold;
+  }
+`
 const SignPage = () => {
   const [validated, setValidated] = useState(false)
   const [userName, setUserName] = useState('')
@@ -30,9 +41,10 @@ const SignPage = () => {
     setValidated(true)
   }
 
+  // border-secondary border-end border-bottom  border-3
   return (
     <StyledContainer className='container py-5 '>
-      <StyledDiv className='d-flex flex-column justify-content-center text-center border-secondary border-end border-bottom border-3 rounded-4 m-5 p-5'>
+      <StyledDiv className='d-flex flex-column justify-content-center text-center   m-5 p-5'>
         <h4 className='fw-semibold mb-1'>Sign In</h4>
         <div>
           <div className='my-4 d-flex'>
@@ -93,7 +105,7 @@ const SignPage = () => {
               required
             />
             <label
-              className='form-check-label fw-semibold fs-6'
+              className='form-check-label fw-semibold fs-6 mb-3'
               htmlFor='gridCheck'
             >
               Remember Me
@@ -106,6 +118,9 @@ const SignPage = () => {
             Sign in
           </button>
         </form>
+        <div className='text-start my-2'>
+          <StyledLink href={''}>Forget Password ?</StyledLink>
+        </div>
       </StyledDiv>
     </StyledContainer>
   )
