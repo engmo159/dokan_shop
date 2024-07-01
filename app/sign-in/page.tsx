@@ -27,6 +27,12 @@ const StyledLink = styled(Link)`
     font-weight: bold;
   }
 `
+const SignInButton = styled.button`
+  box-shadow: 2px 2px 2px green;
+`
+const SignUpButton = styled.button`
+  box-shadow: 2px 2px 2px blue;
+`
 const SignPage = () => {
   const [validated, setValidated] = useState(false)
   const [userName, setUserName] = useState('')
@@ -43,9 +49,9 @@ const SignPage = () => {
 
   // border-secondary border-end border-bottom  border-3
   return (
-    <StyledContainer className='container py-5 '>
+    <StyledContainer className='container py-3 '>
       <StyledDiv className='d-flex flex-column justify-content-center text-center   m-5 p-5'>
-        <h4 className='fw-semibold mb-1'>Sign In</h4>
+        <h4 className='fw-semibold '>Sign In</h4>
         <div>
           <div className='my-4 d-flex'>
             <FlatButton className='btn-primary me-1' $blueShadow>
@@ -55,7 +61,7 @@ const SignPage = () => {
               sign in with Google
             </FlatButton>
           </div>
-          <h4 className='fw-semibold m-4 fs-3'>or</h4>
+          <h4 className=' my-2 fs-3'>or</h4>
         </div>
         <form
           className={`needs-validation ${validated ? 'was-validated' : ''}`}
@@ -114,13 +120,22 @@ const SignPage = () => {
               You must agree before submitting.
             </div>
           </div>
-          <button type='submit' className='btn btn-success w-100 rounded-4'>
+          <SignInButton
+            type='submit'
+            className='btn btn-success w-100 rounded-4 mb-3'
+          >
             Sign in
-          </button>
+          </SignInButton>
         </form>
         <div className='text-start my-2'>
           <StyledLink href={''}>Forget Password ?</StyledLink>
         </div>
+        <hr className='border border-secondary border-1 opacity-50' />
+        <SignUpButton type='button' className='btn btn-primary w-100 rounded-4'>
+          <Link href={''} className='text-white'>
+            Sign up New Account
+          </Link>
+        </SignUpButton>
       </StyledDiv>
     </StyledContainer>
   )
