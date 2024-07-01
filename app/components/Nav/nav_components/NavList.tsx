@@ -6,11 +6,14 @@ import styled, { css } from 'styled-components'
 interface NavListProps {
   children: ReactNode
   isHome?: boolean
+  onClick?: () => void
+  className?: string
   href: string
 }
 
 const StyledLink = styled(Link)<{ $isHome?: boolean }>`
   transition: color 0.3s ease-in-out;
+  color: white;
   ${props =>
     props.$isHome &&
     css`
@@ -28,14 +31,21 @@ const StyledLink = styled(Link)<{ $isHome?: boolean }>`
   }
 `
 
-const NavList: React.FC<NavListProps> = ({ children, isHome, href }) => {
+const NavList: React.FC<NavListProps> = ({
+  href,
+  onClick,
+  className,
+  isHome,
+  children,
+}) => {
   return (
-    <li className='nav-item'>
+    <li className={`nav-item ${className}`}>
       <StyledLink
-        className='nav-link active fw-bold '
+        className={`nav-link ${isHome ? 'active' : ''} fw-bold`}
         aria-current='page'
         href={href}
         $isHome={isHome}
+        onClick={onClick}
       >
         {children}
       </StyledLink>

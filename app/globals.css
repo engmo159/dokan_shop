@@ -58,3 +58,7 @@ a {
     display: none;
   }
 }
+
+.dnone {
+  display: none !important;
+}

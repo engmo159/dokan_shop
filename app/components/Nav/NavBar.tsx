@@ -3,8 +3,8 @@
 
 import NavList from './nav_components/NavList'
 import DropDownList from './nav_components/DropDownList'
-import Image from 'next/image'
 import styled from 'styled-components'
+import { useState } from 'react'
 
 const StyledLogo = styled.img`
   height: 45px;
@@ -14,6 +14,10 @@ const StyledNav = styled.nav`
 `
 
 const NavBar: React.FC = () => {
+  const [clicked, setClicked] = useState('')
+  const handleClick = (link: string) => {
+    setClicked(link)
+  }
   return (
     <StyledNav
       className='navbar navbar-expand-lg  border-body sticky-top '
@@ -38,12 +42,40 @@ const NavBar: React.FC = () => {
         </button>
         <div className='collapse navbar-collapse' id='navbarSupportedContent'>
           <ul className='navbar-nav ms-auto mb-2 mb-lg-0 '>
-            <NavList isHome href='/'>
+            <NavList
+              isHome
+              href='/'
+              onClick={() => {
+                return handleClick('home')
+              }}
+            >
               Home
             </NavList>
-            <NavList href='#products'>Latest Products</NavList>
-            <NavList href='#deals'>Top Deals</NavList>
-            <NavList href='/sign-in'>Log In</NavList>
+            <NavList
+              href='/#products'
+              onClick={() => {
+                return handleClick('products')
+              }}
+            >
+              Latest Products
+            </NavList>
+            <NavList
+              href='/#deals'
+              onClick={() => {
+                return handleClick('deals')
+              }}
+            >
+              Top Deals
+            </NavList>
+            <NavList
+              href='/sign-in'
+              onClick={() => {
+                return handleClick('sign')
+              }}
+              className={clicked === 'sign' ? 'dnone' : ''}
+            >
+              Log In
+            </NavList>
             <li className='nav-item dropdown'>
               <a
                 className='nav-link dropdown-toggle'

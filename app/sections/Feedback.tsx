@@ -30,7 +30,7 @@ const Feedback = () => {
         <div className='col-12 col-md-8'>
           <FormSection />
         </div>
-        <div className='col-12 col-md-2 text-md-start d-flex flex-column justify-content-evenly'>
+        <div className='col-12 col-md-3 text-md-start d-flex flex-column justify-content-evenly'>
           <div className=''>
             <StyledH3 className='fs-4 fw-semibold text-decoration-underline'>
               Address :
